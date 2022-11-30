@@ -8,15 +8,23 @@
 
 import SwiftUI
 
+let backgroundColor = Color("BackgroundColor")
+
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        ZStack {
+            backgroundColor
+            VStack {
+                Image(systemName: "globe")
+                    .imageScale(.large)
+                Text("Hello, world!")
+                    .fontWeight(.black)
+            }
+            .padding()
+            .font(.largeTitle)
+            .foregroundColor(.white)
         }
-        .padding()
+        .edgesIgnoringSafeArea(.all)
     }
 }
 
